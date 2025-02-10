@@ -1,0 +1,65 @@
+# django_boilerplate/
+# A starter Django project with best practices
+
+# 1. Create a new Django project
+# -------------------------------
+# Run the following command to start a Django project:
+# django-admin startproject django_boilerplate
+
+# 2. Project Structure:
+# ----------------------
+# django_boilerplate/
+# ├── manage.py
+# ├── django_boilerplate/
+# │   ├── __init__.py
+# │   ├── settings.py
+# │   ├── urls.py
+# │   ├── wsgi.py
+# │   ├── asgi.py
+# ├── apps/
+# │   ├── users/
+# │   │   ├── models.py
+# │   │   ├── views.py
+# │   │   ├── urls.py
+# │   │   ├── serializers.py
+# │   │   ├── admin.py
+# ├── requirements.txt
+# ├── Dockerfile
+# ├── docker-compose.yml
+# ├── .env
+
+# 3. Install Dependencies
+# ------------------------
+# Create a virtual environment
+# python -m venv venv
+# source venv/bin/activate  (Linux/Mac)
+# venv\Scripts\activate  (Windows)
+# pip install django djangorestframework drf-yasg django-environ
+
+# 4. Database Configuration (settings.py)
+# ----------------------------------------
+# import environ
+# env = environ.Env()
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': env('DB_NAME'),
+#         'USER': env('DB_USER'),
+#         'PASSWORD': env('DB_PASSWORD'),
+#         'HOST': env('DB_HOST', default='localhost'),
+#         'PORT': env('DB_PORT', default='5432'),
+#     }
+# }
+
+# 5. Create Users App
+# --------------------
+# python manage.py startapp users
+
+# 6. Setup Docker (Dockerfile & docker-compose.yml)
+# --------------------------------------------------
+# Add a Dockerfile and docker-compose.yml for containerization
+
+# 7. Run Migrations & Start Server
+# ---------------------------------
+# python manage.py migrate
+# python manage.py runserver
